@@ -1,0 +1,18 @@
+# Movie info configuration value
+# 2nd microservce port config
+# H2 - tcp connection port 8084
+# JPA
+
+server:
+    port: 8082
+spring:
+    application:
+        name: movie-info-service
+    datasource:
+        driverClassName: org.h2.Driver
+        password: admin
+        url: jdbc:h2:tcp://localhost:8084/mem:moviedb
+        username: admin
+    jpa:
+        hibernate:
+            ddl-auto: none

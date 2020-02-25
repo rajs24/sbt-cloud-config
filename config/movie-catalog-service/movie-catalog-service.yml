@@ -1,0 +1,25 @@
+# Movie catalog configuration value
+# 1st microservce port config
+# H2
+
+management: 
+  endpoints: 
+    web: 
+      exposure: 
+        include: hystrix.stream
+
+server: 
+  port: 8081
+spring: 
+  application: 
+    name: movie-catalog-service
+
+  datasource: 
+    driverClassName: org.h2.Driver
+    password: admin
+    url: "jdbc:h2:mem:moviedb"
+    username: admin
+  h2: 
+    console: 
+      enabled: true
+      path: /h2

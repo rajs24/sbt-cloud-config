@@ -1,0 +1,18 @@
+# Movie rating configuration value
+# 3rd microservce port config
+# H2 - tcp connection port 8084
+# JPA
+
+server:
+    port: 8083
+spring:
+    application:
+        name: movie-rating-service
+    datasource:
+        driverClassName: org.h2.Driver
+        password: admin
+        url: jdbc:h2:tcp://localhost:8084/mem:moviedb
+        username: admin
+    jpa:
+        hibernate:
+            ddl-auto: none
